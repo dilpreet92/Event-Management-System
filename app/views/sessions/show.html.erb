@@ -1,0 +1,49 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Topic:</strong>
+  <%= @session.topic %>
+</p>
+
+<p>
+  <strong>Start date:</strong>
+  <%= @session.start_date %>
+</p>
+
+<p>
+  <strong>Start time:</strong>
+  <%= @session.start_time %>
+</p>
+
+<p>
+  <strong>End time:</strong>
+  <%= @session.end_time %>
+</p>
+
+<p>
+  <strong>Location:</strong>
+  <%= @session.location %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @session.description %>
+</p>
+
+<p>
+  <strong>Speaker:</strong>
+  <%= @session.speaker %>
+</p>
+
+<p>
+  <strong>Status:</strong>
+  <%= @session.status %>
+</p>
+
+<p>
+  <strong>Events:</strong>
+  <%= @session.events %>
+</p>
+
+<%= link_to 'Edit', edit_session_path(@session) %> |
+<%= link_to 'Back', sessions_path %>

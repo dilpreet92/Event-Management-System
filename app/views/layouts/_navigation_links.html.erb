@@ -1,0 +1,18 @@
+<%# add navigation links to this file %>
+<li><%= link_to 'All Events', events_path %></li>
+<li><%= link_to 'Events I Created', myevents_path %></li>
+<li><%= link_to 'Events I"m Attending', attending_path %></li>
+<% if session[:user_id] %>
+  <% if session[:admin] %>
+    <li><%= link_to 'Users', users_url %></li>
+  <% end %> 
+  <li id = 'user'>Hello <%= session[:name] %> </li>
+  <li> <%= link_to 'Logout', logout_path %></li> 
+<% end %>
+<li id = 'search'>
+  <%= form_tag('search', method: :get) do %>
+      <%= text_field_tag :search %>
+      <%= submit_tag 'Search' %>
+  <% end %>
+</li>
+<li>
